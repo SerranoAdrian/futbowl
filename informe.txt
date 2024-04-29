@@ -12,9 +12,28 @@
 		 resultados, autores de los goles, nombre de los jugadores, etc. Esto lo hicimos principalmente en Wikipedia.
 
 	Conceptos:
-		> Clases
-		> Object Properties
-		> Data Properties
+	
+			Edicion: Clase para las distintas ediciones de los mundiales.
+			
+			Estadio: Clase para representar los diferentes estadios que formaron parte de los mundiales.
+			
+			Pais: Clase para representar los distintios paises.
+			  Anfitrion: Subclase de Pais que representa los paises que fueron anfitriones de algún mundial.
+			
+			Partido: Clase que representa un partido de algun lugar, con fecha, equipos enfrentador, resultados, etc
+			  PartidoConGanador: Subclase de Partido que representa los partidos con un resultado diferente a empate.
+			     PartidoConPenales: Subclase de PartidoConGanador que representa los partidos junto con los resultados
+						de una tanda de penales.
+			  PartidoEmpatado: Subclase de Partido que representa los partidos que terminaron con resultado de empate.
+			
+			Persona: Clase que representa a las personas que participaron de alguna forma en alguna edicion.
+			   Entrenador: Subclase de Persona que representa a una persona que fue Director Tecnico de alguna seleccion.
+			   Jugador: Subclase de Persona que representa a una persona que fue jugadora de alguna seleccion.
+			
+			Posicion: Clase que enumera las posibles posiciones en las que un jugador juega. Arquero, Defensor, Mediocampista
+				  o Delantero.
+			
+			Seleccion: Clase de las distintas selecciones que participaron de una edicion del mundial.
 	
 	-- Diagrama --
 
