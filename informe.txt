@@ -15,8 +15,21 @@
 	
 	-- Diagrama --
 
-	Queries:
-	
+	Queries: 
+
+		Query1 [ Que selecciones participaron en edicion Qatar 2022 ] -> (participaEn Qatar2022)
+
+		Query2 [ Que selecciones jugaron en el estadio  AlBayt ] -> (jugoComoEquipo1 some (seJugoEn value AlBayt) or jugoComoEquipo2 some (seJugoEn value AlBayt))
+
+		Query3 [ Que selecciones ganaron al menos un partdio en el estadio Lusail ] -> ( ganoPartido some (seJugoEn value Lusail))
+
+		Query4 [ Que defensores hicieron algún gol en la edicion Qatar 2022 ] -> (juegaEnPosicion value Defensor and anotoGol some (partidoDeEdicion value Qatar2022))
+
+		Query5 [ Personas que dirigieron una selección ganadora de alguna edición ] -> (dirigeSeleccion some (ganoEdicion some Edicion))
+
+		Query6 [ Que selecciones perdieron un partido en la edición Qatar2022 habiendo anotado gol ] -> 
+						jugoComoEquipo2 some (PartidoConGanador and partidoDeEdicion value Qatar2022 and golesEquipo2 some xsd:integer [>0])
+
 	Conclusion:
 		A lo largo del desarrollo del tp fuimos discutiendo los distintos enfoques que podriamos
 		tratar para crear una ontologia de futbol que abarque bastantes conceptos y que al mismo
