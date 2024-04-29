@@ -1,0 +1,42 @@
+#INFORME#
+
+	Dominio elegido: Mundiales de futbol, jugadores, entrenadores, selecciones partidos y como estan
+			 relacionados entre si.
+
+	Objetivos del modelado: Crear un modelo con una utilidad practica y con una estructura inteligente
+				para poder razonar sobre este de manera sencilla. 
+	
+	Fuentes: Wikipedia
+
+	Conceptos:
+		> Clases
+		> Object Properties
+		> Data Properties
+	
+	-- Diagrama --
+
+	Queries:
+	
+	Conclusion:
+		A lo largo del desarrollo del tp fuimos discutiendo los distintos enfoques que podriamos
+		tratar para crear una ontologia de futbol que abarque bastantes conceptos y que al mismo
+		tiempo tenga una utilidad practica. Es por eso que decidimos ir por uno muy interesante
+		relacionado a como se estructuran las competencias en el futbol. En primer lugar notamos
+ 		que si profundizabamos en las distintas formas de organizar dichas competencias, 
+		la ontologia resultante iba a ser muy amplia en cuanto estructura, pero vaga en cuanto a
+		los datos con los que la ibamos a nutrir. Es por esto que terminamos decantandonos por
+		el estilo de competencia utilizado por los mundiales de futbol, torneo con fases 
+		eliminatorias y de clasificacion. Que al mismo tiempo la adaptamos para que pueda ser
+		utilizada para representar las distintas ediciones de dicha competencia a lo largo de la 
+		historia. En el presente tp, generamos instancias para la última de estas.
+		En cuanto a los inconvenientes encontrados, notamos que se nos iba a dificultar la
+		representacion de las fechas en las que los jugadores jugaron en sus selecciones para asi
+		deducir luego, si participaron en algun partido jugado en una fecha en particular. Nos 
+		dimos cuenta que para implementar dichas relaciones, teniamos que crear relaciones 
+		ternarias, problema que para realizarlo en protegé resultaba bastante complicado.
+		Finalmente como solución a esto, decidimos aclarar si un partido se habia jugado
+		en alguna edicion en particular, entonces si el jugador habia participado de una edicion
+		y el partido pertenecia a esta, concluiamos que el jugador habia jugado el partido,
+		obviamente sin tener en cuenta posibles lesiones, suplencias, etc. Esta ultima solucion
+		nos parecio bastante representativa aunque no la mejor, ya que relaciones ternarias
+		habrian podido describir casos de manera mas detallada.
