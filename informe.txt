@@ -1,12 +1,15 @@
 #INFORME#
 
-	Dominio elegido: Mundiales de futbol, jugadores, entrenadores, selecciones partidos y como estan
-			 relacionados entre si.
-
+	Dominio elegido: La ontología elegida trata sobre los mundiales de fútbol a lo largo de la historia, los jugadores y entrenadores que
+			 participaron, las selecciones que formaron parte y tambien los partidos que se jugaron. Para este dominio realizamos
+			 distintas conexiones entre las distintas clases y tambien asignamos algunos atributos para estas.
+			
 	Objetivos del modelado: Crear un modelo con una utilidad practica y con una estructura inteligente
 				para poder razonar sobre este de manera sencilla. 
 	
-	Fuentes: Wikipedia
+	Fuentes: En cuanto a la obtencion de informacion, tuvimos la ventaja de que todos los participantes del grupo conociamos bastante
+		 respecto del tema por lo que solo nos tuvimos que dedicar a buscar los datos historicos de los partidos especificos,
+		 resultados, autores de los goles, nombre de los jugadores, etc. Esto lo hicimos principalmente en Wikipedia.
 
 	Conceptos:
 		> Clases
@@ -53,3 +56,4 @@
 		obviamente sin tener en cuenta posibles lesiones, suplencias, etc. Esta ultima solucion
 		nos parecio bastante representativa aunque no la mejor, ya que relaciones ternarias
 		habrian podido describir casos de manera mas detallada.
+		
