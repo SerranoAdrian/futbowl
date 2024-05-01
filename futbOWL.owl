@@ -1,0 +1,1625 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5/"
+     xml:base="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-5="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#anotoGol -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#anotoGol">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Jugador"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Partido"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#anotoGolEnContra -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#anotoGolEnContra">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Jugador"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Partido"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#dirigeSeleccion -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#dirigeSeleccion">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#esDirigidaPor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Entrenador"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Seleccion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#equipo1 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#equipo1">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#jugoComoEquipo1"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Partido"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Seleccion"/>
+        <rdfs:comment>Por convención, es el equipo ganador. En caso de empate, es indistinto.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#equipo2 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#equipo2">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#jugoComoEquipo2"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Partido"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Seleccion"/>
+        <rdfs:comment>Por convención, es el equipo perdedor. En caso de empate, es indistinto.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#esDirigidaPor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#esDirigidaPor">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#esPaisDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#esPaisDe">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#tieneNacionalidad"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Persona"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#esRepresentadoPor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#esRepresentadoPor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#representaPais"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Pais"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Seleccion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#estaConformadaPor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#estaConformadaPor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#juegaPara"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Seleccion"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Jugador"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#fueAnfitrion -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#fueAnfitrion">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#fueOrganizadaPor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Pais"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Edicion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#fueOrganizadaPor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#fueOrganizadaPor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#ganadorEdicion -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#ganadorEdicion">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#ganoEdicion"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Edicion"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Seleccion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#ganadorPartido -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#ganadorPartido">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#ganoPartido"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#PartidoConGanador"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Seleccion"/>
+        <rdfs:comment>Siguiendo con la convención, debe coincidir con equipo1.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#ganoEdicion -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#ganoEdicion"/>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#ganoPartido -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#ganoPartido"/>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#juegaEnPosicion -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#juegaEnPosicion">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Jugador"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Posicion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#juegaPara -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#juegaPara">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Jugador"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Seleccion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#jugoComoEquipo1 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#jugoComoEquipo1">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment>Por convención, es el equipo ganador. En caso de empate, es indistinto.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#jugoComoEquipo2 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#jugoComoEquipo2">
+        <rdfs:comment>Por convención, es el equipo perdedor. En caso de empate, es indistinto.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#participaEn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#participaEn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Seleccion"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Edicion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#quedaEn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#quedaEn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#tieneEstadio"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Estadio"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Pais"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#representaPais -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#representaPais">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#seJugoEn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#seJugoEn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Partido"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Estadio"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#tieneEstadio -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#tieneEstadio"/>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#tieneNacionalidad -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#tieneNacionalidad">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Pais"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#fecha -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#fecha">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#fechaFinEdicion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#fechaFinEdicion">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#fecha"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Edicion"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#fechaInicioEdicion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#fechaInicioEdicion">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#fecha"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Edicion"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#fechaPartido -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#fechaPartido">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#fecha"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Partido"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#golesEmpate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#golesEmpate">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#golesEquipo1"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#golesEquipo2"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#PartidoEmpatado"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#golesEquipo1 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#golesEquipo1">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Partido"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#golesEquipo2 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#golesEquipo2">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Partido"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#penalesEquipo1 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#penalesEquipo1">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#PartidoConPenales"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#penalesEquipo2 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#penalesEquipo2">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#PartidoConPenales"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Anfitrion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Anfitrion">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Pais"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#fueAnfitrion"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Edicion"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Edicion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Edicion">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#fueOrganizadaPor"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Anfitrion"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#ganadorEdicion"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Seleccion"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Entrenador -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Entrenador">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Persona"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#dirigeSeleccion"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Seleccion"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Estadio -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Estadio">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#quedaEn"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Pais"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Jugador -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Jugador">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Persona"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#juegaPara"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Seleccion"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Pais -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Pais">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#esRepresentadoPor"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Seleccion"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Partido -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Partido">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#equipo1"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Seleccion"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#equipo2"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Seleccion"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#seJugoEn"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Estadio"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#PartidoConGanador -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#PartidoConGanador">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Partido"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#ganadorPartido"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Seleccion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#PartidoEmpatado"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#PartidoConPenales -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#PartidoConPenales">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#PartidoConGanador"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#penalesEquipo1"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#penalesEquipo2"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#PartidoEmpatado -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#PartidoEmpatado">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Partido"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#golesEmpate"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Persona -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Persona">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#tieneNacionalidad"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Pais"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Posicion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Posicion">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Arquero"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Defensor"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Delantero"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Mediocampista"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Seleccion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Seleccion">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#estaConformadaPor"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Jugador"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#esDirigidaPor"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Entrenador"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#participaEn"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Edicion"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#representaPais"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Pais"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionArgentina -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionArgentina">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Seleccion"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#estaConformadaPor"/>
+                        <owl:allValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#tieneNacionalidad"/>
+                                <owl:hasValue rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Argentina"/>
+                            </owl:Restriction>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#representaPais"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Argentina"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionBrasil -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionBrasil">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Seleccion"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#estaConformadaPor"/>
+                        <owl:allValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#tieneNacionalidad"/>
+                                <owl:hasValue rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Brasil"/>
+                            </owl:Restriction>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#representaPais"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Brasil"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionCroacia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionCroacia">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Seleccion"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#estaConformadaPor"/>
+                        <owl:allValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#tieneNacionalidad"/>
+                                <owl:hasValue rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Croacia"/>
+                            </owl:Restriction>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#representaPais"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Croacia"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionFrancia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionFrancia">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Seleccion"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#estaConformadaPor"/>
+                        <owl:allValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#tieneNacionalidad"/>
+                                <owl:hasValue rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Francia"/>
+                            </owl:Restriction>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#representaPais"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Francia"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionMarruecos -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionMarruecos">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Seleccion"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#estaConformadaPor"/>
+                        <owl:allValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#tieneNacionalidad"/>
+                                <owl:hasValue rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Marruecos"/>
+                            </owl:Restriction>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#representaPais"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Marruecos"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionQatar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionQatar">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Seleccion"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#estaConformadaPor"/>
+                        <owl:allValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#tieneNacionalidad"/>
+                                <owl:hasValue rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Qatar"/>
+                            </owl:Restriction>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#representaPais"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Qatar"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Achraf_Dari -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Achraf_Dari">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Persona"/>
+        <untitled-ontology-5:anotoGol rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Qatar2022TercerPuesto"/>
+        <untitled-ontology-5:juegaEnPosicion rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Defensor"/>
+        <untitled-ontology-5:juegaPara rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionMarruecos2022"/>
+        <untitled-ontology-5:tieneNacionalidad rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Marruecos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Achraf_Hakimi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Achraf_Hakimi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Persona"/>
+        <untitled-ontology-5:juegaEnPosicion rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Defensor"/>
+        <untitled-ontology-5:juegaPara rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionMarruecos2022"/>
+        <untitled-ontology-5:tieneNacionalidad rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Marruecos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Akram_Afif -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Akram_Afif">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Persona"/>
+        <untitled-ontology-5:juegaEnPosicion rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Defensor"/>
+        <untitled-ontology-5:juegaPara rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionQatar2022"/>
+        <untitled-ontology-5:tieneNacionalidad rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Qatar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#AlBayt -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#AlBayt">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Estadio"/>
+        <untitled-ontology-5:quedaEn rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Qatar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Antoine_Griezmann -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Antoine_Griezmann">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Persona"/>
+        <untitled-ontology-5:anotoGol rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Rusia2018Final"/>
+        <untitled-ontology-5:anotoGol rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Rusia2018OctavosDeFinal1"/>
+        <untitled-ontology-5:juegaEnPosicion rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Delantero"/>
+        <untitled-ontology-5:juegaPara rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionFrancia2018"/>
+        <untitled-ontology-5:juegaPara rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionFrancia2022"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Argentina -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Argentina">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Pais"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Arquero -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Arquero">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Posicion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Bassam_Al-Rawi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Bassam_Al-Rawi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Persona"/>
+        <untitled-ontology-5:juegaEnPosicion rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Mediocampista"/>
+        <untitled-ontology-5:juegaPara rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionQatar2022"/>
+        <untitled-ontology-5:tieneNacionalidad rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Qatar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Benjamin_Pavard -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Benjamin_Pavard">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Persona"/>
+        <untitled-ontology-5:anotoGol rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Rusia2018OctavosDeFinal1"/>
+        <untitled-ontology-5:juegaEnPosicion rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Defensor"/>
+        <untitled-ontology-5:juegaPara rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionFrancia2018"/>
+        <untitled-ontology-5:juegaPara rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionFrancia2022"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Brasil -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Brasil">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Pais"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Bruno_Petkovic -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Bruno_Petkovic">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Persona"/>
+        <untitled-ontology-5:anotoGol rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Qatar2022CuartosDeFinal1"/>
+        <untitled-ontology-5:juegaEnPosicion rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Delantero"/>
+        <untitled-ontology-5:juegaPara rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionCroacia2022"/>
+        <untitled-ontology-5:tieneNacionalidad rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Croacia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Croacia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Croacia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Pais"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Defensor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Defensor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Posicion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Delantero -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Delantero">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Posicion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Didier_Deshamps -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Didier_Deshamps">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Persona"/>
+        <untitled-ontology-5:dirigeSeleccion rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionFrancia2018"/>
+        <untitled-ontology-5:dirigeSeleccion rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionFrancia2022"/>
+        <untitled-ontology-5:tieneNacionalidad rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Francia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Education_City -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Education_City">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Estadio"/>
+        <untitled-ontology-5:quedaEn rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Qatar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Emiliano_Martinez -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Emiliano_Martinez">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Persona"/>
+        <untitled-ontology-5:juegaEnPosicion rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Arquero"/>
+        <untitled-ontology-5:juegaPara rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionArgentina2022"/>
+        <untitled-ontology-5:tieneNacionalidad rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Argentina"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#España -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#España">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Pais"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Francia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Francia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Pais"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Fred -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Fred">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Persona"/>
+        <untitled-ontology-5:juegaEnPosicion rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Mediocampista"/>
+        <untitled-ontology-5:juegaPara rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionBrasil2022"/>
+        <untitled-ontology-5:tieneNacionalidad rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Brasil"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Félix_Sánchez -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Félix_Sánchez">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Persona"/>
+        <untitled-ontology-5:dirigeSeleccion rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionQatar2022"/>
+        <untitled-ontology-5:tieneNacionalidad rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#España"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Gabriel_Mercado -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Gabriel_Mercado">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Persona"/>
+        <untitled-ontology-5:anotoGol rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Rusia2018OctavosDeFinal1"/>
+        <untitled-ontology-5:juegaEnPosicion rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Defensor"/>
+        <untitled-ontology-5:juegaPara rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionArgentina2018"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Ivan_Perisic -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Ivan_Perisic">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Persona"/>
+        <untitled-ontology-5:anotoGol rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Rusia2018Final"/>
+        <untitled-ontology-5:juegaEnPosicion rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Delantero"/>
+        <untitled-ontology-5:juegaPara rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionCroacia2018"/>
+        <untitled-ontology-5:juegaPara rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionCroacia2022"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Jalifa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Jalifa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Estadio"/>
+        <untitled-ontology-5:quedaEn rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Qatar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Jorge_Sampaoli -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Jorge_Sampaoli">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Persona"/>
+        <untitled-ontology-5:dirigeSeleccion rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionArgentina2018"/>
+        <untitled-ontology-5:tieneNacionalidad rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Argentina"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Josko_Gvardiol -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Josko_Gvardiol">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Persona"/>
+        <untitled-ontology-5:anotoGol rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Qatar2022TercerPuesto"/>
+        <untitled-ontology-5:juegaEnPosicion rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Defensor"/>
+        <untitled-ontology-5:juegaPara rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionCroacia2022"/>
+        <untitled-ontology-5:tieneNacionalidad rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Croacia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Julian_Álvarez -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Julian_Álvarez">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Persona"/>
+        <untitled-ontology-5:anotoGol rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Qatar2022Semifinal1"/>
+        <untitled-ontology-5:juegaEnPosicion rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Delantero"/>
+        <untitled-ontology-5:juegaPara rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionArgentina2022"/>
+        <untitled-ontology-5:tieneNacionalidad rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Argentina"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Kazan_Arena -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Kazan_Arena">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Estadio"/>
+        <untitled-ontology-5:quedaEn rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Rusia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Kylian_Mbappé -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Kylian_Mbappé">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Persona"/>
+        <untitled-ontology-5:anotoGol rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Qatar2022Final"/>
+        <untitled-ontology-5:anotoGol rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Rusia2018Final"/>
+        <untitled-ontology-5:anotoGol rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Rusia2018OctavosDeFinal1"/>
+        <untitled-ontology-5:juegaEnPosicion rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Delantero"/>
+        <untitled-ontology-5:juegaPara rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionFrancia2018"/>
+        <untitled-ontology-5:juegaPara rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionFrancia2022"/>
+        <untitled-ontology-5:tieneNacionalidad rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Francia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Lionel_Messi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Lionel_Messi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Persona"/>
+        <untitled-ontology-5:anotoGol rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Qatar2022Final"/>
+        <untitled-ontology-5:anotoGol rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Qatar2022Semifinal1"/>
+        <untitled-ontology-5:juegaEnPosicion rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Delantero"/>
+        <untitled-ontology-5:juegaPara rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionArgentina2018"/>
+        <untitled-ontology-5:juegaPara rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionArgentina2022"/>
+        <untitled-ontology-5:tieneNacionalidad rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Argentina"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Lionel_Scaloni -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Lionel_Scaloni">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Persona"/>
+        <untitled-ontology-5:dirigeSeleccion rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionArgentina2022"/>
+        <untitled-ontology-5:tieneNacionalidad rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Argentina"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Loujniki -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Loujniki">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Estadio"/>
+        <untitled-ontology-5:quedaEn rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Rusia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Lucas_Mendes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Lucas_Mendes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Persona"/>
+        <untitled-ontology-5:juegaEnPosicion rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Defensor"/>
+        <untitled-ontology-5:juegaPara rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionQatar2022"/>
+        <untitled-ontology-5:tieneNacionalidad rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Brasil"/>
+        <untitled-ontology-5:tieneNacionalidad rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Qatar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Luka_Modric -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Luka_Modric">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Persona"/>
+        <untitled-ontology-5:juegaEnPosicion rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Mediocampista"/>
+        <untitled-ontology-5:juegaPara rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionCroacia2018"/>
+        <untitled-ontology-5:juegaPara rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionCroacia2022"/>
+        <untitled-ontology-5:tieneNacionalidad rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Croacia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Lusail -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Lusail">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Estadio"/>
+        <untitled-ontology-5:quedaEn rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Qatar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Mario_Mandzukic -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Mario_Mandzukic">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Persona"/>
+        <untitled-ontology-5:anotoGol rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Rusia2018Final"/>
+        <untitled-ontology-5:anotoGolEnContra rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Rusia2018Final"/>
+        <untitled-ontology-5:juegaEnPosicion rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Delantero"/>
+        <untitled-ontology-5:juegaPara rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionCroacia2018"/>
+        <untitled-ontology-5:juegaPara rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionCroacia2022"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Marquinhos -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Marquinhos">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Persona"/>
+        <untitled-ontology-5:juegaEnPosicion rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Defensor"/>
+        <untitled-ontology-5:juegaPara rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionBrasil2022"/>
+        <untitled-ontology-5:tieneNacionalidad rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Brasil"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Marruecos -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Marruecos">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Pais"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Mediocampista -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Mediocampista">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Posicion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Mislav_Orsic -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Mislav_Orsic">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Persona"/>
+        <untitled-ontology-5:anotoGol rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Qatar2022TercerPuesto"/>
+        <untitled-ontology-5:juegaEnPosicion rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Delantero"/>
+        <untitled-ontology-5:juegaPara rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionCroacia2022"/>
+        <untitled-ontology-5:tieneNacionalidad rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Croacia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Neymar_Jr -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Neymar_Jr">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Persona"/>
+        <untitled-ontology-5:anotoGol rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Qatar2022CuartosDeFinal1"/>
+        <untitled-ontology-5:juegaEnPosicion rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Delantero"/>
+        <untitled-ontology-5:juegaPara rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionBrasil2022"/>
+        <untitled-ontology-5:tieneNacionalidad rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Brasil"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Nicolas_Otamendi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Nicolas_Otamendi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Persona"/>
+        <untitled-ontology-5:juegaEnPosicion rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Defensor"/>
+        <untitled-ontology-5:juegaPara rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionArgentina2018"/>
+        <untitled-ontology-5:juegaPara rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionArgentina2022"/>
+        <untitled-ontology-5:tieneNacionalidad rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Argentina"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Paul_Pogba -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Paul_Pogba">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Persona"/>
+        <untitled-ontology-5:anotoGol rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Rusia2018Final"/>
+        <untitled-ontology-5:juegaEnPosicion rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Mediocampista"/>
+        <untitled-ontology-5:juegaPara rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionFrancia2018"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Qatar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Qatar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Pais"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Qatar2022 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Qatar2022">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Edicion"/>
+        <untitled-ontology-5:fueOrganizadaPor rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Qatar"/>
+        <untitled-ontology-5:ganadorEdicion rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionArgentina2022"/>
+        <untitled-ontology-5:fechaFinEdicion rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-12-18T12:00:00</untitled-ontology-5:fechaFinEdicion>
+        <untitled-ontology-5:fechaInicioEdicion rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-11-20T13:00:00</untitled-ontology-5:fechaInicioEdicion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Qatar2022CuartosDeFinal1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Qatar2022CuartosDeFinal1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Partido"/>
+        <untitled-ontology-5:equipo1 rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionCroacia2022"/>
+        <untitled-ontology-5:equipo2 rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionBrasil2022"/>
+        <untitled-ontology-5:ganadorPartido rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionCroacia2022"/>
+        <untitled-ontology-5:seJugoEn rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Education_City"/>
+        <untitled-ontology-5:fechaPartido rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-12-09T12:00:00</untitled-ontology-5:fechaPartido>
+        <untitled-ontology-5:golesEquipo1 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</untitled-ontology-5:golesEquipo1>
+        <untitled-ontology-5:golesEquipo2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</untitled-ontology-5:golesEquipo2>
+        <untitled-ontology-5:penalesEquipo1 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</untitled-ontology-5:penalesEquipo1>
+        <untitled-ontology-5:penalesEquipo2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</untitled-ontology-5:penalesEquipo2>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Qatar2022Final -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Qatar2022Final">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Partido"/>
+        <untitled-ontology-5:equipo1 rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionArgentina2022"/>
+        <untitled-ontology-5:equipo2 rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionFrancia2022"/>
+        <untitled-ontology-5:ganadorPartido rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionArgentina2022"/>
+        <untitled-ontology-5:seJugoEn rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Lusail"/>
+        <untitled-ontology-5:fechaPartido rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-12-18T12:00:00</untitled-ontology-5:fechaPartido>
+        <untitled-ontology-5:golesEquipo1 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</untitled-ontology-5:golesEquipo1>
+        <untitled-ontology-5:golesEquipo2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</untitled-ontology-5:golesEquipo2>
+        <untitled-ontology-5:penalesEquipo1 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</untitled-ontology-5:penalesEquipo1>
+        <untitled-ontology-5:penalesEquipo2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</untitled-ontology-5:penalesEquipo2>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Qatar2022GrupoF1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Qatar2022GrupoF1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Partido"/>
+        <untitled-ontology-5:equipo1 rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionCroacia2022"/>
+        <untitled-ontology-5:equipo2 rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionMarruecos2022"/>
+        <untitled-ontology-5:seJugoEn rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#AlBayt"/>
+        <untitled-ontology-5:fechaPartido rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-11-23T07:00:00</untitled-ontology-5:fechaPartido>
+        <untitled-ontology-5:golesEmpate rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</untitled-ontology-5:golesEmpate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Qatar2022Semifinal1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Qatar2022Semifinal1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Partido"/>
+        <untitled-ontology-5:equipo1 rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionArgentina2022"/>
+        <untitled-ontology-5:equipo2 rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionCroacia2022"/>
+        <untitled-ontology-5:ganadorPartido rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionArgentina2022"/>
+        <untitled-ontology-5:seJugoEn rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Lusail"/>
+        <untitled-ontology-5:fechaPartido rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-12-13T16:00:00</untitled-ontology-5:fechaPartido>
+        <untitled-ontology-5:golesEquipo1 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</untitled-ontology-5:golesEquipo1>
+        <untitled-ontology-5:golesEquipo2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</untitled-ontology-5:golesEquipo2>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Qatar2022Semifinal2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Qatar2022Semifinal2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Partido"/>
+        <untitled-ontology-5:equipo1 rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionFrancia2022"/>
+        <untitled-ontology-5:equipo2 rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionMarruecos2022"/>
+        <untitled-ontology-5:ganadorPartido rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionFrancia2022"/>
+        <untitled-ontology-5:seJugoEn rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#AlBayt"/>
+        <untitled-ontology-5:fechaPartido rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-12-14T16:00:00</untitled-ontology-5:fechaPartido>
+        <untitled-ontology-5:golesEquipo1 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</untitled-ontology-5:golesEquipo1>
+        <untitled-ontology-5:golesEquipo2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</untitled-ontology-5:golesEquipo2>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Qatar2022TercerPuesto -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Qatar2022TercerPuesto">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Partido"/>
+        <untitled-ontology-5:equipo1 rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionCroacia2022"/>
+        <untitled-ontology-5:equipo2 rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionMarruecos2022"/>
+        <untitled-ontology-5:ganadorPartido rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionCroacia2022"/>
+        <untitled-ontology-5:seJugoEn rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Jalifa"/>
+        <untitled-ontology-5:fechaPartido rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-12-17T12:00:00</untitled-ontology-5:fechaPartido>
+        <untitled-ontology-5:golesEquipo1 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</untitled-ontology-5:golesEquipo1>
+        <untitled-ontology-5:golesEquipo2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</untitled-ontology-5:golesEquipo2>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Randal_Kolo_Muani -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Randal_Kolo_Muani">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Persona"/>
+        <untitled-ontology-5:anotoGol rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Qatar2022Semifinal2"/>
+        <untitled-ontology-5:juegaEnPosicion rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Delantero"/>
+        <untitled-ontology-5:juegaPara rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionFrancia2022"/>
+        <untitled-ontology-5:tieneNacionalidad rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Francia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Rusia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Rusia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Pais"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Rusia2018 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Rusia2018">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Edicion"/>
+        <untitled-ontology-5:fueOrganizadaPor rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Rusia"/>
+        <untitled-ontology-5:ganadorEdicion rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionFrancia2018"/>
+        <untitled-ontology-5:fechaFinEdicion rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-15T12:00:00</untitled-ontology-5:fechaFinEdicion>
+        <untitled-ontology-5:fechaInicioEdicion rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-06-14T12:00:00</untitled-ontology-5:fechaInicioEdicion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Rusia2018Final -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Rusia2018Final">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Partido"/>
+        <untitled-ontology-5:equipo1 rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionFrancia2018"/>
+        <untitled-ontology-5:equipo2 rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionCroacia2018"/>
+        <untitled-ontology-5:ganadorPartido rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionFrancia2018"/>
+        <untitled-ontology-5:seJugoEn rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Loujniki"/>
+        <untitled-ontology-5:fechaPartido rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-15T12:00:00</untitled-ontology-5:fechaPartido>
+        <untitled-ontology-5:golesEquipo1 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</untitled-ontology-5:golesEquipo1>
+        <untitled-ontology-5:golesEquipo2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</untitled-ontology-5:golesEquipo2>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Rusia2018OctavosDeFinal1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Rusia2018OctavosDeFinal1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Partido"/>
+        <untitled-ontology-5:equipo1 rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionFrancia2018"/>
+        <untitled-ontology-5:equipo2 rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionArgentina2018"/>
+        <untitled-ontology-5:ganadorPartido rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionFrancia2018"/>
+        <untitled-ontology-5:seJugoEn rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Kazan_Arena"/>
+        <untitled-ontology-5:fechaPartido rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-06-30T11:00:00</untitled-ontology-5:fechaPartido>
+        <untitled-ontology-5:golesEquipo1 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</untitled-ontology-5:golesEquipo1>
+        <untitled-ontology-5:golesEquipo2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</untitled-ontology-5:golesEquipo2>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionArgentina2018 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionArgentina2018">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionArgentina"/>
+        <untitled-ontology-5:participaEn rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Rusia2018"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionArgentina2022 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionArgentina2022">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionArgentina"/>
+        <untitled-ontology-5:participaEn rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Qatar2022"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionBrasil2022 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionBrasil2022">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionBrasil"/>
+        <untitled-ontology-5:participaEn rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Qatar2022"/>
+        <untitled-ontology-5:representaPais rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Brasil"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionCroacia2018 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionCroacia2018">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionCroacia"/>
+        <untitled-ontology-5:participaEn rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Rusia2018"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionCroacia2022 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionCroacia2022">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionCroacia"/>
+        <untitled-ontology-5:participaEn rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Qatar2022"/>
+        <untitled-ontology-5:representaPais rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Croacia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionFrancia2018 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionFrancia2018">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionFrancia"/>
+        <untitled-ontology-5:participaEn rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Rusia2018"/>
+        <untitled-ontology-5:representaPais rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Francia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionFrancia2022 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionFrancia2022">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionFrancia"/>
+        <untitled-ontology-5:participaEn rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Qatar2022"/>
+        <untitled-ontology-5:representaPais rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Francia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionMarruecos2022 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionMarruecos2022">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionMarruecos"/>
+        <untitled-ontology-5:participaEn rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Qatar2022"/>
+        <untitled-ontology-5:representaPais rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Marruecos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionQatar2022 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionQatar2022">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionQatar"/>
+        <untitled-ontology-5:participaEn rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Qatar2022"/>
+        <untitled-ontology-5:representaPais rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Qatar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Sergio_Aguero -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Sergio_Aguero">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Persona"/>
+        <untitled-ontology-5:anotoGol rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Rusia2018OctavosDeFinal1"/>
+        <untitled-ontology-5:juegaEnPosicion rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Delantero"/>
+        <untitled-ontology-5:juegaPara rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionArgentina2018"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Theo_Hernández -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Theo_Hernández">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Persona"/>
+        <untitled-ontology-5:anotoGol rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Qatar2022Semifinal2"/>
+        <untitled-ontology-5:juegaEnPosicion rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Defensor"/>
+        <untitled-ontology-5:juegaPara rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionFrancia2022"/>
+        <untitled-ontology-5:tieneNacionalidad rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Francia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Tite -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Tite">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Persona"/>
+        <untitled-ontology-5:dirigeSeleccion rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionBrasil2022"/>
+        <untitled-ontology-5:tieneNacionalidad rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Brasil"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Walid_Regragui -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Walid_Regragui">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Persona"/>
+        <untitled-ontology-5:dirigeSeleccion rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionMarruecos2022"/>
+        <untitled-ontology-5:tieneNacionalidad rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Marruecos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Yassine_Bounou -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Yassine_Bounou">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Persona"/>
+        <untitled-ontology-5:juegaEnPosicion rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Arquero"/>
+        <untitled-ontology-5:juegaPara rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionMarruecos2022"/>
+        <untitled-ontology-5:tieneNacionalidad rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Marruecos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Zlatko_Dalić -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Zlatko_Dalić">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Persona"/>
+        <untitled-ontology-5:dirigeSeleccion rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionCroacia2018"/>
+        <untitled-ontology-5:dirigeSeleccion rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionCroacia2022"/>
+        <untitled-ontology-5:tieneNacionalidad rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Croacia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Ángel_Di_María -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Ángel_Di_María">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Persona"/>
+        <untitled-ontology-5:anotoGol rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Qatar2022Final"/>
+        <untitled-ontology-5:anotoGol rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Rusia2018OctavosDeFinal1"/>
+        <untitled-ontology-5:juegaEnPosicion rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Delantero"/>
+        <untitled-ontology-5:juegaPara rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionArgentina2018"/>
+        <untitled-ontology-5:juegaPara rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionArgentina2022"/>
+        <untitled-ontology-5:tieneNacionalidad rdf:resource="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Argentina"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Edicion"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Estadio"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Pais"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Partido"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Persona"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Posicion"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#Seleccion"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionArgentina"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionBrasil"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionCroacia"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionFrancia"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionMarruecos"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/adrianserrano/ontologies/2024/3/untitled-ontology-5#SeleccionQatar"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
